@@ -1,0 +1,341 @@
+/* New Color Theme */
+:root {
+  --primary-bg: #f4f7fc;
+  --secondary-bg: #e1e9f8;
+  --primary-text: #1f3a52;
+  --secondary-text: #2a4e6e;
+  --accent-color: #4a90e2;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+}
+
+/* Page Container */
+.homeContainer {
+  min-height: 85vh;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #F4F7FC;
+  overflow-y: auto;
+}
+
+/* Header & Filters */
+.homeHeader {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: linear-gradient(135deg, #4a90e2, #1f3a52);
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Filter Styling */
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+}
+
+.filterContainer label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filterContainer input[type="checkbox"] {
+  accent-color: var(--accent-color);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Create Project Button */
+.createProject {
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, var(--accent-color), #2a4e6e);
+  transition: 350ms;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.createProject:hover {
+  background: var(--accent-color);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Wrapper to make only the table scroll */
+.projectTableContainer {
+  width: 95%;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  overflow-x: auto; /* Enables horizontal scrolling only */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+.projectTable {
+  width: 100%;
+  min-width: 1200px; /* Ensures table doesn't shrink too much */
+  border-collapse: collapse;
+  text-transform: capitalize;
+}
+
+.projectTable th,
+.projectTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.projectTable th {
+  background-color: var(--secondary-bg);
+  font-weight: bold;
+  color: var(--primary-text);
+}
+
+/* Status Labels */
+.status {
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+}
+
+.ongoing {
+  background-color: rgba(255, 253, 195, 0.888);
+  color: rgb(228, 206, 1);
+}
+
+.onhold {
+  background-color:  #ff566740;
+  color:  #f0162c;
+}
+
+.planning {
+  background-color: #58e4fa52;
+  color: #17a2b8;
+}
+
+.completed {
+  background-color: #85fea1b1;
+  color: #2dc551;
+}
+
+.projectName{
+  color: #17a2b8;
+  text-transform: capitalize;
+}
+
+.projectName:hover{
+  color: #12bb5e;
+}
+
+/* Action Buttons */
+.actionLink {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  /* display: inline-block; */
+  transition: all 0.3s ease-in-out;
+}
+
+/* VIEW - Blue */
+/* .view {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.view:hover {
+  background-color: #357abf;
+} */
+
+/* EDIT - Green */
+/* .edit {
+  background-color: var(--success-color);
+  color: white;
+  border: none;
+}
+
+.edit:hover {
+  background-color: #218838;
+} */
+
+/* DELETE - Red */
+/* .delete {
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+}
+
+.delete:hover {
+  background-color: #c82333;
+} */
+
+
+.actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .view, .edit, .delete {
+    width: 45px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+
+    img{
+      width: 100%;
+      transition: 250ms;
+    }
+
+    i{
+      font-size: 1.4rem;
+      color: rgb(112, 152, 246);
+      transition: 250ms;
+    }
+  }
+
+
+
+  .edit { margin: 0 10px; }
+  
+  .view i:hover { font-size: 1.6rem; }
+  .edit img:hover { 
+    width: 110%;
+  }
+  .delete img:hover { 
+    width: 110%; 
+  }
+
+
+
+
+
+
+/* REPORT - Orange */
+.report {
+  background-color: var(--warning-color);
+  color: white;
+  border: none;
+}
+
+.report:hover {
+  background-color: #e0a800;
+}
+
+/* New Project Modal */
+.newProject {
+  width: 100%;
+  min-height: 85vh;
+  background: rgba(31, 58, 82, 0.8);
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 40px; */
+  padding: 0 5px;
+}
+
+.closeNewProjectBtn {
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: rgb(253, 174, 174);
+  color: red;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.newProjectData{
+  width: 85%;
+  height: 85%;
+  margin: 10px 0;
+  overflow-y: auto;
+  /* background-color: var(--primary-text); */
+}
+
+/* Adds Units */
+.length::after {
+  content: "KM";
+  margin-left: 4px;
+}
+
+.cost::after {
+  content: "CR";
+  margin-left: 4px;
+}
+
+.progress::after {
+  content: "%";
+  margin-left: 4px;
+}
+
+.contractor::after {
+  content: "pvt";
+  margin-left: 4px;
+}
+
+/* in projects.module.css */
+.noData {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 1rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectTableContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projectTable {
+    min-width: max-content; 
+
+  }
+
+  .closeNewProjectBtn {
+    top: 10px;
+    right: 5px;
+  }
+
+  .newProjectData{
+    width: 100%;
+    overflow: hidden;
+  }
+
+}

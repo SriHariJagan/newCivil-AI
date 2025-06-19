@@ -1,0 +1,134 @@
+:root {
+  --primary-bg: #f4f7fc;
+  --secondary-bg: #ffffff;
+  --primary-text: #1f3a52;
+  --secondary-text: #2a4e6e;
+  --accent-color: #4a90e2;
+  --button-color: #28a745;
+  --input-bg: white;
+  --input-border: #ccc;
+}
+
+
+
+.container {
+    max-width: 900px;
+    margin: 10px auto;
+    background: #F4F7FC;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+
+    position: relative;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+  }
+  
+  /* Two-column layout for large and medium screens */
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .leftColumn,
+  .rightColumn {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Label and input alignment */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--secondary-text);
+  }
+  
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    outline: none;
+    background: var(--input-bg);
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .formGroup input:focus, textarea:focus, select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0px 0px 6px rgba(74, 144, 226, 0.5);
+  }
+  
+  textarea {
+    height: 80px;
+  }
+  
+  .readOnly {
+    background-color: #f3f3f3;
+    cursor: not-allowed;
+  }
+  
+  .submitBtn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #2c5ea0;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submitBtn:hover {
+    background: #1e477a;
+  }
+
+
+  .closeNewTaskBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 14px;
+    border-radius: 50%;
+    border: 1px solid red;
+    background-color: rgb(253, 174, 174);
+    color: red;
+    font-weight: 800;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  
+  /* Responsive Design */
+  @media (max-width: 708px) {
+
+    .container{
+        margin: 10px;
+    }
+
+    .form {
+      flex-direction: column;
+    }
+  
+    .leftColumn,
+    .rightColumn {
+      width: 100%;
+    }
+  }
+  

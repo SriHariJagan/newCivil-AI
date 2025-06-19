@@ -1,0 +1,221 @@
+/* Root Theme Colors */
+:root {
+  --primary-bg: #f4f7fc;
+  --secondary-bg: #ffffff;
+  --primary-text: #1f3a52;
+  --secondary-text: #2a4e6e;
+  --accent-color: #4a90e2;
+  --button-color: #28a745;
+  --delete-color: #dc3545;
+  --input-bg: #fff;
+  --input-border: #ccc;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Modal Container */
+.modalContainer {
+  background: var(--secondary-bg);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  scrollbar-width: thin;
+}
+
+/* Title */
+.formTitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary-text);
+  margin-bottom: 24px;
+}
+
+/* Layout */
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.formGroupContainer {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.formGroup {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Form Row */
+.formRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.formRow label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--secondary-text);
+}
+
+.formRow p,
+.formRow input,
+.formRow select,
+.formRow textarea {
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--primary-text);
+}
+
+.formRow p {
+  background: #f9f9f9;
+  border: none;
+}
+
+.modeTextArea {
+  resize: vertical;
+  width: 750px;
+  min-height: 120px;
+  max-height: 300px;
+}
+
+input:focus,
+select:focus,
+.modeTextArea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+/* Buttons */
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.submitButton,
+.deleteButton,
+.confirmButton,
+.cancelButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submitButton,
+.cancelButton {
+  background: var(--button-color);
+  color: white;
+}
+
+.submitButton:hover,
+.cancelButton:hover {
+  background: #218838;
+}
+
+.deleteButton,
+.confirmButton {
+  background: var(--delete-color);
+  color: white;
+}
+
+.deleteButton:hover,
+.confirmButton:hover {
+  background: #c82333;
+}
+
+/* Confirmation Box */
+.confirmBox {
+  text-align: center;
+}
+
+.confirmBox p {
+  margin: 10px 0;
+}
+
+
+@media (max-width: 800px) {
+
+  textarea{
+    width: 650px;
+  }
+
+}
+
+
+
+/* Responsive */
+@media (max-width: 508px) {
+  .modalContainer {
+    padding: 20px;
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  textarea{
+    max-width: 320px;
+  }
+
+}
+
+@media (max-width: 380px) {
+  textarea{
+    max-width: 280px;
+  }
+}
+
+
+@media (max-width: 322px) {
+  textarea{
+    max-width: 220px;
+  }
+}
+
+
+.modalContainer::-webkit-scrollbar {
+  width: 8px;
+}
+.modalContainer::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+.modalContainer::-webkit-scrollbar-track {
+  background: transparent;
+}

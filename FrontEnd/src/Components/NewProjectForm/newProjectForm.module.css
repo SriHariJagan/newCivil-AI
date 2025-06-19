@@ -1,0 +1,160 @@
+/* Root Theme Colors */
+:root {
+    --primary-bg: #f4f7fc;
+    --secondary-bg: #ffffff;
+    --primary-text: #1f3a52;
+    --secondary-text: #2a4e6e;
+    --accent-color: #4a90e2;
+    --button-color: #28a745;
+    --input-bg: white;
+    --input-border: #ccc;
+  }
+  
+  /* Form Container */
+  .newProjectFormContainer {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px 10px;
+    background: var(--primary-bg);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    /* overflow: scroll; */
+  }
+  
+  /* Title */
+  .formTitle {
+    text-align: center;
+    font-size: 22px;
+    color: var(--primary-text);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Layout */
+  .projectForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form Group Container (Two-Column Layout) */
+  .formGroupContainer {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Form Group (Left & Right Column) */
+  .formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Form Row - Label & Input Side by Side */
+  .formRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Labels */
+  .formRow label {
+    width: 180px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary-text);
+    text-align: right;
+  }
+  
+  /* Inputs */
+  .formRow input {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    outline: none;
+    background: var(--input-bg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .formRow input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0px 0px 6px rgba(74, 144, 226, 0.5);
+  }
+  
+  .selectInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    outline: none;
+    background: var(--input-bg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .selectInput:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0px 0px 6px rgba(74, 144, 226, 0.5);
+  }
+
+
+  /* Submit Button */
+  .submitContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .submitButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background: var(--button-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .submitButton:hover {
+    background: #218838;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+
+    .formGroupContainer {
+      flex-direction: column;
+    }
+  
+    .formRow label {
+      text-align: left;
+      width: 100%;
+      /* margin-bottom: 10px; */
+    }
+
+    .formRow {
+      width: 80%;
+      /* flex-direction: column; */
+      align-items: center;
+      margin: auto;
+    }
+  }
+
+
+  @media (max-width: 508px) {
+
+    .formRow {
+      width: 95%;
+    }
+
+    .newProjectFormContainer {
+      margin: 20px;
+      width: 100%;
+    }
+  
+  }
