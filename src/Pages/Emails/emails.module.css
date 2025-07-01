@@ -1,0 +1,7 @@
+.emailContainer {
+  height: 88vh;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-bg);
+  overflow-y: auto;
+}

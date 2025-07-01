@@ -1,0 +1,265 @@
+.addTaskContainer {
+  width: 100%;
+  min-height: 88.5%;
+  background-color: rgba(76, 97, 117, 0.7); /* Neutral overlay works for both themes */
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.taskContainer {
+  width: 100%;
+  min-height: 88vh;
+  background-color: var(--primary-bg);
+  padding: 20px;
+}
+
+/* Filter Section */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.filterSection {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filterSection select,
+.filterSection input {
+  padding: 8px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--input-bg);
+  color: var(--primary-text);
+}
+
+.clearBtn {
+  background-color: transparent;
+  color: var(--danger-color);
+  border: 1.8px solid var(--danger-color);
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.clearBtn:hover {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.addTaskBtn {
+  padding: 8px 12px;
+  background-color: var(--accent-color);
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.addTaskBtn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Table Wrapper */
+.tableWrapper {
+  overflow-x: auto;
+  width: 100%;
+  /* border-radius: 8px; */
+  margin-top: 10px;
+  box-shadow: 0px 0.1px 10px rgba(0, 0, 0, 0.153);
+}
+
+/* Table Styling */
+.taskTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--secondary-bg);
+  min-width: 900px;
+  text-transform: capitalize;
+  color: var(--primary-text);
+}
+
+.taskTable th,
+.taskTable td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid var(--input-border);
+}
+
+.taskTable th {
+  color: var(--primary-text);
+}
+
+.taskTable tbody tr:hover td {
+  background-color: var(--input-bg);
+}
+
+/* Truncated Description */
+.truncatedDescription {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+/* Status Colors */
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: white;
+}
+
+.ongoing {
+  background-color: rgba(255, 253, 195, 0.888) !important;
+  color: rgb(228, 206, 1);
+}
+
+.onhold {
+  background-color: rgba(255, 86, 103, 0.25) !important;
+  color: #f0162c;
+}
+
+.planning {
+  background-color: rgba(53, 228, 255, 0.17) !important;
+  color: var(--info-color);
+}
+
+.completed {
+  background-color: rgba(145, 255, 171, 0.7) !important;
+  color: var(--success-color);
+}
+
+/* Action Buttons */
+.editBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view,
+.edit,
+.delete {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.view i,
+.edit i,
+.delete i {
+  font-size: 1.4rem;
+  color: rgb(112, 152, 246);
+  transition: 250ms;
+}
+
+.view i:hover {
+  font-size: 1.6rem;
+}
+
+.edit img,
+.delete img {
+  width: 100%;
+  transition: 250ms;
+}
+
+.edit img:hover,
+.delete img:hover {
+  width: 110%;
+}
+
+.edit {
+  margin: 0 10px;
+}
+
+/* Show All Button */
+.showAllBtn {
+  padding: 4px 6px;
+  background-color: transparent;
+  border: 2px solid var(--success-color);
+  color: var(--success-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.showAllBtn:hover {
+  color: white;
+  background-color: var(--success-color);
+}
+
+/* No Task Found */
+.noTaskFound {
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+  color: #888;
+}
+
+/* Username */
+.userName {
+  color: var(--accent-color);
+}
+
+.userName:hover {
+  color: var(--hover-color);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .filter {
+    gap: 10px;
+  }
+
+  .taskTable {
+    width: max-content;
+    font-size: 12px;
+  }
+
+  .editBtns {
+    display: flex;
+  }
+
+  .closeNewTaskBtn {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .addTaskContainer {
+    padding: 10px;
+  }
+
+  .taskContainer {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,287 @@
+/* Page Container */
+.homeContainer {
+  min-height: 88.5vh;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--primary-bg);
+  overflow-y: auto;
+}
+
+/* Header & Filters */
+.homeHeader {
+  width: 90%;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--text-color);
+  border: 1px solid var(--info-color);
+  /* background: linear-gradient(135deg, var(--accent-color), var(--primary-text)); */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Filter Styling */
+.filterContainer {
+  padding-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  font-size: 16px;
+  color: var(--primary-text);
+}
+
+.filterContainer label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filterContainer input[type="checkbox"] {
+  accent-color: var(--accent-color);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Create Project Button */
+.createProject {
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: var(--button-active);
+  transition: 350ms;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.createProject:hover {
+  background: var(--accent-color);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Wrapper to make only the table scroll */
+.projectTableContainer {
+  width: 95%;
+  margin: 10px auto 20px auto;
+  overflow-x: auto;
+  background-color: var(--secondary-bg);
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+.projectTable {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+  text-transform: capitalize;
+}
+
+.projectTable th,
+.projectTable td {
+  padding: 12px;
+  border: 1px solid var(--input-border);
+  text-align: center;
+  color: var(--primary-text);
+}
+
+.projectTable tr:hover td {
+  background-color: var(--input-bg);
+}
+
+.projectTable th {
+  background-color: var(--secondary-bg);
+  font-weight: bold;
+}
+
+/* Status Labels */
+.status {
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Colored Statuses */
+.ongoing {
+  background-color: rgba(255, 253, 195, 0.888) !important;
+  color: #e4ce01;
+}
+
+.onhold {
+  background-color: rgba(255, 86, 103, 0.25) !important;
+  color: #f0162c;
+}
+
+.planning {
+  background-color: rgba(88, 228, 250, 0.32) !important;
+  color: var(--info-color);
+}
+
+.completed {
+  background-color: rgba(133, 254, 161, 0.7) !important;
+  color: var(--success-color);
+}
+
+.projectName {
+  color: var(--info-color);
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+}
+
+.projectName:hover {
+  color: #12bb5e;
+}
+
+/* Action Buttons */
+.actionLink {
+  margin: 0 5px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view,
+.edit,
+.delete {
+  width: 45px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.view i,
+.edit i,
+.delete i {
+  font-size: 1.4rem;
+  color: rgb(112, 152, 246);
+  transition: 250ms;
+}
+
+.view i:hover {
+  font-size: 1.6rem;
+}
+
+.edit img:hover,
+.delete img:hover {
+  width: 110%;
+}
+
+/* REPORT - Orange */
+.report {
+  background-color: var(--warning-color);
+  color: white;
+  border: none;
+}
+
+.report:hover {
+  background-color: #e0a800;
+}
+
+/* New Project Modal */
+.newProject {
+  width: 100%;
+  min-height: 85vh;
+  background: rgba(31, 58, 82, 0.8);
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.closeNewProjectBtn {
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  border: 1px solid var(--danger-color);
+  background-color: #fca7a7;
+  color: var(--danger-color);
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.newProjectData {
+  width: 85%;
+  height: 85%;
+  margin: 10px 0;
+  overflow-y: auto;
+}
+
+/* Adds Units */
+.length::after {
+  content: "KM";
+  margin-left: 4px;
+}
+
+.cost::after {
+  content: "CR";
+  margin-left: 4px;
+}
+
+.progress::after {
+  content: "%";
+  margin-left: 4px;
+}
+
+.contractor::after {
+  content: "pvt";
+  margin-left: 4px;
+}
+
+/* No Data */
+.noData {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projectTableContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projectTable {
+    min-width: max-content;
+  }
+
+  .closeNewProjectBtn {
+    top: 10px;
+    right: 5px;
+  }
+
+  .newProjectData {
+    width: 100%;
+    overflow: hidden;
+  }
+}
