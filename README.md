@@ -35,7 +35,7 @@ I developed the **entire frontend architecture** using **React.js**, integrated 
 
 ## 🧱 System Architecture
 
-  Frontend (React.js + Tailwind CSS)
+  Frontend (React.js + Module CSS)
   ↓
   REST API Integration
   ↓
@@ -55,7 +55,7 @@ I developed the **entire frontend architecture** using **React.js**, integrated 
 
 | Layer | Technologies |
 |--------|---------------|
-| **Frontend** | React.js, Tailwind CSS, Framer Motion, Context API |
+| **Frontend** | React.js, Module CSS, Framer Motion, Context API |
 | **Backend (Integration)** | Django REST Framework |
 | **AI / NLP** | Generative AI APIs, NLP Document Q&A |
 | **Notifications** | Email API, WhatsApp Business API |
